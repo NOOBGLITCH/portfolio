@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff6f61, #ffcc5c);
-        }
-
-        .coming-soon {
-            text-align: center;
-        }
-
-        .coming-soon h1 {
-            font-size: 6rem;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/regular.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
 </head>
+
 <body>
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl">My Portfolio</a>
     </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+    </div>
+  </div>
+  <html data-theme="sunset">
+    <div class="flex justify-center py-10">
+      <div class="avatar">
+        <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="text-2xl text-center font-bold ">
+      <h1>Jidnyesh Patil</h1>
+      <p>DevOps Engineer Intern</p>
+      <p>skilled in</p>
+    </div>
+    <div class="flex justify-center">
+      <a href="https://github.com/NOOBGLITCH" aria-label="Link to GitHub profile with skills">
+        <img
+          src="https://go-skill-icons.vercel.app/api/icons?i=git,linux,github,bash,docker,html,css,bootstrap,tailwind,python&theme=dark"
+          alt="Skills: Git, Linux, GitHub, Bash, Docker, HTML, CSS, Bootstrap, Tailwind, Python"
+        />
+      </a>
+    </div>
+
+
+  <div class="dock dock-md">
+    <button>
+      <i class="fa-solid fa-house"></i>
+      <span class="dock-label">Home</span>
+    </button>
+  
+    <button class="dock-active">
+      <i class="fa-solid fa-code"></i>
+      <span class="dock-label">projects</span>
+    </button>
+  
+    <button>
+      <i class="fa-regular fa-circle-user"></i>
+      <span class="dock-label">about me</span>
+    </button>
+    
+  </div>
+
 </body>
 </html>
