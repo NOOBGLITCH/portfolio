@@ -3,10 +3,12 @@
 
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/regular.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
   <meta charset="UTF-8">
@@ -42,45 +44,93 @@
     </div>
   </div>
   <html data-theme="sunset">
-    <div class="flex justify-center py-10">
-      <div class="avatar">
-        <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
-          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-        </div>
+  <div class="flex justify-center py-10">
+    <div class="avatar">
+      <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
       </div>
     </div>
-    <div class="text-2xl text-center font-bold ">
-      <h1>Jidnyesh Patil</h1>
-      <p>DevOps Engineer Intern</p>
-      <p>skilled in</p>
-    </div>
-    <div class="flex justify-center">
-      <a href="https://github.com/NOOBGLITCH" aria-label="Link to GitHub profile with skills">
-        <img
-          src="https://go-skill-icons.vercel.app/api/icons?i=git,linux,github,bash,docker,html,css,bootstrap,tailwind,python&theme=dark"
-          alt="Skills: Git, Linux, GitHub, Bash, Docker, HTML, CSS, Bootstrap, Tailwind, Python"
-        />
-      </a>
-    </div>
+  </div>
+  <div class="text-2xl text-center font-bold ">
+    <h1>Jidnyesh Patil</h1>
+    <p>DevOps Engineer Intern</p>
+  </div>
 
+  <!-- Skills Grid -->
+  <section id="skills" class="skills-section">
+    <h2>My Skills</h2>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+      <!-- Individual Skill Cards -->
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=docker&theme=dark" alt="Docker" class="skill-icon" />
+        <h3>Docker</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=linux&theme=dark" alt="Git" class="skill-icon" />
+        <h3>Linux</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=git&theme=dark" alt="Git" class="skill-icon" />
+        <h3>Git</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=github&theme=dark" alt="GitHub" class="skill-icon" />
+        <h3>GitHub</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=bootstrap&theme=dark" alt="Bootstrap"
+          class="skill-icon" />
+        <h3>Bootstrap</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=tailwind&theme=dark" alt="Tailwind"
+          class="skill-icon" />
+        <h3>Tailwind</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=html&theme=dark" alt="HTML" class="skill-icon" />
+        <h3>HTML</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=css&theme=dark" alt="CSS" class="skill-icon" />
+        <h3>CSS</h3>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=javascript&theme=dark" alt="JavaScript"
+          class="skill-icon" />
+        <h3>JavaScript</h3>
+      </div>
+    </div>
+  </section>
 
   <div class="dock dock-md">
     <button>
       <i class="fa-solid fa-house"></i>
       <span class="dock-label">Home</span>
     </button>
-  
+
     <button class="dock-active">
       <i class="fa-solid fa-code"></i>
       <span class="dock-label">projects</span>
     </button>
-  
+
     <button>
       <i class="fa-regular fa-circle-user"></i>
       <span class="dock-label">about me</span>
     </button>
-    
+
   </div>
 
 </body>
+
 </html>
