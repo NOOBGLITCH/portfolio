@@ -17,12 +17,12 @@
 </head>
 
 <body>
-  <div class="navbar bg-base-100">
-    <div class="navbar-start">
+  <div class="navbar bg-base-100 shadow-sm">
+    <div class="flex-none">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        <div tabindex="0" role="button" class="btn btn-square btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -31,17 +31,13 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">My Portfolio</a>
     </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl">daisyUI</a>
     </div>
-    <div class="navbar-end">
+    <div class="flex-none">
     </div>
+  </div>
   </div>
   <html data-theme="sunset">
   <div class="flex justify-center py-10">
@@ -55,10 +51,12 @@
     <h1>Jidnyesh Patil</h1>
     <p>DevOps Engineer Intern</p>
   </div>
-
+  <div class="flex justify-center mt-4">
+    <a href="your-resume-link.pdf" target="_blank" class="btn btn-soft-accent btn-lg hover:shadow-lg hover:scale-105 transition-all duration-200">Resume📋</a>
+  </div>
   <!-- Skills Grid -->
   <section id="skills" class="skills-section">
-    <h2>My Skills</h2>
+    <h2 class="text-blue-500">My Skills</h2>
 
     <!-- Skills Grid -->
     <div class="skills-grid">
@@ -114,23 +112,18 @@
   </section>
 
   <div class="dock dock-md">
-    <button>
-      <i class="fa-solid fa-house"></i>
+    <a href="/" class="btn btn-ghost dock-active"> <i class="fa-solid fa-house"></i>
       <span class="dock-label">Home</span>
-    </button>
+    </a>
 
-    <button class="dock-active">
-      <i class="fa-solid fa-code"></i>
-      <span class="dock-label">projects</span>
-    </button>
+    <a href="project.html" class="btn btn-ghost"> <i class="fa-solid fa-code"></i>
+      <span class="dock-label">Projects</span>
+    </a>
 
-    <button>
-      <i class="fa-regular fa-circle-user"></i>
-      <span class="dock-label">about me</span>
-    </button>
-
+    <a href="/about" class="btn btn-ghost"> <i class="fa-regular fa-circle-user"></i>
+      <span class="dock-label">About Me</span>
+    </a>
   </div>
-
 </body>
 
 </html>
