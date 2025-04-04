@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-/* Grid for Skill Cards */
+/* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -20,10 +20,10 @@
   margin: 0 auto 4rem;
 }
 
-/* For mobile screens (up to a certain breakpoint, e.g., 640px or 768px) */
-@media (max-width: 767px) { /* Adjust breakpoint as needed */
+/* Skills Grid Responsive */
+@media (max-width: 767px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -38,25 +38,21 @@
     gap: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-
-  .skill-card {
-    padding: 1.5rem 1rem;
-  }
 }
 
-/* Skill Card Styling */
+/* Skill Card */
 .skill-card {
   background: rgba(30, 41, 59, 0.4);
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.03);
   position: relative;
   overflow: hidden;
-  display: flex; /* Changed to flex-direction: column */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -68,21 +64,19 @@
   border-color: rgba(96, 165, 250, 0.1);
 }
 
-/* Style for the container of image and text (now stacked) */
+/* Skill Item (Image & Text) */
 .skill-item {
   display: flex;
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center; /* Center them horizontally */
-  justify-content: center; /* Center vertically (though less relevant now) */
-  gap: 5px; /* Adjust vertical spacing between image and text */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .skill-item img {
   width: 20px;
   height: 20px;
-  display: inline-block;
-  margin-right: 0; /* Remove right margin as they are stacked */
-  margin-bottom: 5px; /* Add bottom margin to space from text */
+  margin-bottom: 5px;
 }
 
 .skill-item h3 {
@@ -91,11 +85,25 @@
   margin: 0;
 }
 
-/* If you are no longer using the <i> tag for icons */
+/* Hide Icon Tag */
 .skill-card i {
-  display: none; /* Hide the icon tag */
+  display: none;
 }
 
-.skill-card:hover i {
-  /* No longer relevant if using images */
+/* Ghost Button Hover */
+.btn-ghost:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Active Dock */
+.dock-active {
+  padding-bottom: 12px;
+  position: relative; /* For potential absolute positioning */
+}
+
+/* Dock Label */
+.dock-label {
+  font-size: 0.9em;
+  white-space: nowrap;
+  order: 1;
 }

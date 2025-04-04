@@ -1,15 +1,24 @@
-// Select all buttons inside the dock container
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".dock button");
-  
-    // Add click event listener to each button
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Remove 'dock-active' class from all buttons
-        buttons.forEach((btn) => btn.classList.remove("dock-active"));
-  
-        // Add 'dock-active' class to the clicked button
-        button.classList.add("dock-active");
-      });
-    });
+  const currentPath = window.location.pathname;
+  const dockLinks = document.querySelectorAll(".dock a");
+
+  dockLinks.forEach(link => {
+    link.classList.remove("dock-active");
   });
+
+  dockLinks.forEach(link => {
+    const linkPath = new URL(link.href, window.location.origin).pathname;
+
+    if (linkPath === currentPath) {
+      link.classList.add("dock-active");
+    }
+    else if (linkPath === currentPath.substring(1) && currentPath.startsWith('/')) {
+       link.classList.add("dock-active");
+    }
+    else if (currentPath === '/' && (linkPath === '/index.html' || linkPath === '/')) {
+        if (link.getAttribute('href') === '/') {
+           link.classList.add("dock-active");
+        }
+    }
+  });
+});
