@@ -21,7 +21,8 @@
     <div class="flex-none">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-square btn-ghost">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            class="inline-block h-5 w-5 stroke-current">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
@@ -34,132 +35,138 @@
     </div>
     <div class="flex-1">
       <a href="index.html" class="btn btn-ghost text-xl">
-       My Portfolio
+        My Portfolio
       </a>
     </div>
     <div class="navbar-end">
-      <a href="your-resume-link.pdf" target="_blank" class="btn btn-soft-accent btn-lg hover:shadow-lg hover:scale-105 transition-all duration-200">Resume📋</a>
+      <a href="https://kutt.it/jidnyeshresume" target="_blank"
+        class="btn btn-soft-accent btn-lg hover:shadow-lg hover:scale-105 transition-all duration-200">Resume📋</a>
     </div>
     <div class="flex-none">
     </div>
   </div>
   </div>
   <html data-theme="sunset">
+  <h1 class="text-4xl text-blue-600 text-center underline">My Projects</h1>
 
-  <div class="py-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <a href="/project1" class="card card-compact bg-base-100 shadow-sm">
+  <div class="py-12">
+    <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mb-12">
+      <!-- First Docker Compose -->
+      <a href="https://github.com/NOOBGLITCH/first-docker-compose"
+        class="card card-compact bg-base-100 shadow-sm border p-6">
         <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 1" />
+          <img src="https://i.postimg.cc/VkG4dSCb/2.jpg" alt="First Docker Compose" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">
-            Project 1
-            <div class="badge badge-outline badge-info">Mar 25</div>
+            First Docker Compose
+            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Mar 25</div>
           </h2>
-          <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-          <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">html</div>
-            <div class="btn btn-outline btn-info">css</div>
+          <p>Django web app deployed using Docker Compose with Nginx and MySQL for a complete stack setup.</p>
+          <div class="py-4 card-actions justify-end">
+            <div class="badge badge-info">python</div>
+            <div class="badge badge-info">django</div>
+            <div class="badge badge-info">docker</div>
+            <div class="badge badge-info">nginx</div>
+            <div class="badge badge-info">mysql</div>
           </div>
         </div>
       </a>
-      <a href="/project2" class="card card-compact bg-base-100 shadow-sm">
+
+      <!-- Multi-Stage Docker -->
+      <a href="https://github.com/NOOBGLITCH/multistagedocker"
+        class="card card-compact bg-base-100 shadow-sm border p-6">
         <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 2" />
+          <img src="https://i.postimg.cc/J7ZTP499/3.jpg" alt="Multi-Stage Docker" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">
-            Project 2
-            <div class="badge badge-outline badge-info">Apr 01</div>
+            Multi-Stage Docker
+            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Mar 30</div>
           </h2>
-          <p>This is the description for the second project card.</p>
+          <p>Three-stage Docker build for optimized, lightweight app containers with build, test, and deploy phases.</p>
           <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">react</div>
-            <div class="btn btn-outline btn-info">tailwind</div>
+            <div class="badge badge-info">docker</div>
+            <div class="badge badge-info">multistage</div>
           </div>
         </div>
       </a>
-      <a href="/project3" class="card card-compact bg-base-100 shadow-sm">
+
+      <!-- OpenRouter Telegram Bot -->
+      <a href="https://github.com/NOOBGLITCH/openroutertelegrambot"
+        class="card card-compact bg-base-100 shadow-sm border p-6">
         <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 3" />
+          <img src="https://i.postimg.cc/D0rBZBr2/4.jpg" alt="OpenRouter Telegram Bot" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">
-            Project 3
-            <div class="badge badge-outline badge-info">Apr 10</div>
+            Telegram AI Bot
+            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 04</div>
           </h2>
-          <p>Third project card with a different technology focus.</p>
+          <p>Telegram bot that connects to 33 AI models using OpenRouter API for smart chat, Q&A, and more.</p>
           <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">node.js</div>
-            <div class="btn btn-outline btn-info">express</div>
+            <div class="badge badge-info">python</div>
+            <div class="badge badge-info">api</div>
           </div>
         </div>
       </a>
-      <a href="/project4" class="card card-compact bg-base-100 shadow-sm">
+
+      <!-- Text-to-Image Generator -->
+      <a href="https://newbienoob-0.github.io/jscalculator/" class="card card-compact bg-base-100 shadow-sm border p-6">
         <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 4" />
+          <img src="https://i.postimg.cc/zGX0zwVr/1.jpg" alt="Text to Image Generator" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">
-            Project 4
-            <div class="badge badge-outline badge-info">Apr 18</div>
+            Text-to-Image
+            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 11</div>
           </h2>
-          <p>The fourth project showcasing a mobile application concept.</p>
-          <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">flutter</div>
-            <div class="btn btn-outline btn-info">dart</div>
+          <p>Web app that generates AI images from text using Hugging Face models. Deployed with GitHub Pages.</p>
+          <div class="py-4 card-actions justify-end">
+            <div class="badge badge-info">html</div>
+            <div class="badge badge-info">huggingface</div>
           </div>
         </div>
       </a>
-      <a href="/project5" class="card card-compact bg-base-100 shadow-sm">
+
+      <!-- Android VPN Client -->
+      <a href="https://github.com/NOOBGLITCH/android-vpn-client-ics-openvpn"
+        class="card card-compact bg-base-100 shadow-sm border p-6">
         <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 5" />
+          <img src="https://i.postimg.cc/m2SmWpZj/5.jpg" alt="Android VPN" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">
-            Project 5
-            <div class="badge badge-outline badge-info">Apr 25</div>
+            Android VPN Client
+            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 17</div>
           </h2>
-          <p>The fifth project focusing on data analysis and visualization.</p>
-          <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">python</div>
-            <div class="btn btn-outline btn-info">pandas</div>
+          <p>Custom Android VPN app using OpenVPN with one-tap connect, privacy-first design & multiple servers.</p>
+          <div class="py-4 card-actions justify-end">
+            <div class="badge badge-info">java</div>
+            <div class="badge badge-info">vpn</div>
           </div>
         </div>
       </a>
-      <a href="/project6" class="card card-compact bg-base-100 shadow-sm">
+
+      <!-- Project 6: Awsome Linux Learn -->
+      <a href="https://github.com/NOOBGLITCH/awsome-linux-learn"
+        class="card card-compact bg-base-100 shadow-sm border p-6">
         <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 6" />
+          <img src="https://i.postimg.cc/4NGWMRGn/6.jpg" alt="Awsome Linux Learn" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">
-            Project 5
-            <div class="badge badge-outline badge-info">May 02</div>
+            Awsome Linux Learn
+            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 20</div>
           </h2>
-          <p>Description for project 6.</p>
-          <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">...</div>
-            <div class="btn btn-outline btn-info">...</div>
+          <p>Comprehensive Linux learning resources including cheat sheets, commands, loops, functions, and more.</p>
+          <div class="py-2 card-actions justify-end">
+            <div class="badge badge-info">linux</div>
+            <div class="badge badge-info">cheatsheet</div>
           </div>
         </div>
       </a>
-      <a href="/project7" class="card card-compact bg-base-100 shadow-sm">
-        <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Project 7" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Project 6
-            <div class="badge badge-outline badge-info">May 09</div>
-          </h2>
-          <p>Description for project 7.</p>
-          <div class="card-actions justify-end">
-            <div class="btn btn-outline btn-info">...</div>
-            <div class="btn btn-outline btn-info">...</div>
-          </div>
-        </div>
-      </a>
+
     </div>
   </div>
 
