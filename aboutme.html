@@ -26,6 +26,8 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="aboutme.html">About me</a></li>
           <li><a href="project.html">Projects</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="https://kutt.it/jidnyeshresume" target="_blank">Resume</a></li>
         </ul>
       </div>
     </div>
@@ -164,19 +166,88 @@
                 <li>📍 Vasai, Maharashtra, India</li>
               </ul>
             </div>
-            <footer class="dock dock-md mt-10">
-              <a href="index.html" class="btn btn-ghost dock-active">
-                <i class="fa-solid fa-house"></i>
-                <span class="dock-label">Home</span>
-              </a>
-              <a href="project.html" class="btn btn-ghost">
-                <i class="fa-solid fa-code"></i>
-                <span class="dock-label">Projects</span>
-              </a>
-              <a href="aboutme.html" class="btn btn-ghost">
-                <i class="fa-regular fa-circle-user"></i>
-                <span class="dock-label">About Me</span>
-              </a>
+            <style>
+              /* === Minimal Full-Width Dock Footer === */
+              footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: var(--fallback-b1, oklch(var(--b1)/1));
+                box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+                z-index: 50;
+              }
+
+              .dock {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 0.5rem 0.75rem;
+                overflow-x: auto;
+                scrollbar-width: none;
+                /* hide scrollbar (Firefox) */
+              }
+
+              .dock::-webkit-scrollbar {
+                display: none;
+              }
+
+              /* hide scrollbar (Chrome/Safari) */
+
+              .dock a {
+                flex: 0 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: var(--fallback-c, oklch(var(--bc)/1));
+                font-size: 0.8rem;
+                min-width: 60px;
+              }
+
+              .dock i {
+                font-size: 1.1rem;
+                /* smaller icons */
+                margin-bottom: 3px;
+              }
+
+              .dock-label {
+                font-size: 0.7rem;
+                white-space: nowrap;
+                /* keep text on one line */
+              }
+
+              main {
+                padding-bottom: 5.5rem;
+                /* prevent overlap with dock */
+              }
+            </style>
+
+            <footer>
+              <div class="dock">
+                <a href="index.html" class="flex flex-col items-center justify-center">
+                  <i class="fa-solid fa-house"></i>
+                  <span class="dock-label">Home</span>
+                </a>
+
+                <a href="project.html" class="flex flex-col items-center justify-center">
+                  <i class="fa-solid fa-code"></i>
+                  <span class="dock-label">Projects</span>
+                </a>
+
+                <a href="aboutme.html" class="flex flex-col items-center justify-center">
+                  <i class="fa-regular fa-circle-user"></i>
+                  <span class="dock-label">About Me</span>
+                </a>
+
+                <a href="certificates.html" class="flex flex-col items-center justify-center">
+                  <i class="fa-solid fa-envelope-circle-check"></i>
+                  <span class="dock-label">Certificates</span>
+                </a>
+
+
+              </div>
             </footer>
 </body>
 
