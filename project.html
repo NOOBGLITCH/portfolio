@@ -55,60 +55,14 @@
       Projects</button>
   </div>
 
+  <div class="py-4 px-2">
+    <div id="category-filters" class="flex flex-nowrap gap-2 overflow-x-auto pb-2 px-4 justify-start md:justify-center">
+    </div>
+  </div>
+
   <div class="py-12">
     <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mb-12"></div>
   </div>
-
-  <style>
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: var(--fallback-b1, oklch(var(--b1)/1));
-      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
-      z-index: 50;
-    }
-
-    .dock {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 0.5rem 0.75rem;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .dock::-webkit-scrollbar {
-      display: none;
-    }
-
-    .dock a {
-      flex: 0 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--fallback-c, oklch(var(--bc)/1));
-      font-size: 0.8rem;
-      min-width: 60px;
-    }
-
-    .dock i {
-      font-size: 1.1rem;
-      margin-bottom: 3px;
-    }
-
-    .dock-label {
-      font-size: 0.7rem;
-      white-space: nowrap;
-    }
-
-    main {
-      padding-bottom: 5.5rem;
-    }
-  </style>
 
   <footer>
     <div class="dock">
@@ -135,29 +89,73 @@
   </footer>
 
   <script>
+    let allProjects = [];
+
     fetch('projects.json')
       .then(res => res.json())
       .then(projects => {
-        const grid = document.getElementById('projects-grid');
-        grid.innerHTML = projects.map(project => `
-          <a href="https://github.com/NOOBGLITCH" target="_blank" rel="noopener noreferrer"
-            class="card card-compact bg-base-100 shadow-sm border p-6">
-            <figure>
-              <img src="${project.image_url}" alt="${project.title}" />
-            </figure>
-            <div class="card-body">
-              <h2 class="font-bold card-title">
-                ${project.title}
-                <div class="badge badge-outline badge-info whitespace-nowrap">${project.status_badge}</div>
-              </h2>
-              <p>${project.description}</p>
-              <div class="py-4 card-actions justify-end">
-                ${project.tags.map(tag => `<div class="badge badge-primary">${tag}</div>`).join('')}
-              </div>
-            </div>
-          </a>
+        allProjects = projects;
+
+        // Extract unique categories
+        const categories = ['All', ...new Set(projects.map(p => p.category))];
+
+        // Create category filter buttons
+        const filterContainer = document.getElementById('category-filters');
+        filterContainer.innerHTML = categories.map((category, index) => `
+          <button 
+            onclick="filterByCategory('${category}')" 
+            class="btn btn-sm btn-outline ${index === 0 ? 'btn-primary' : ''} whitespace-nowrap"
+          >
+            ${category}
+          </button>
         `).join('');
+
+        // Render all projects initially
+        renderProjects(projects);
       });
+
+    function filterByCategory(category) {
+      // Update button styles
+      const buttons = document.querySelectorAll('#category-filters button');
+      buttons.forEach(btn => {
+        if (btn.textContent === category) {
+          btn.classList.add('btn-primary');
+          btn.classList.remove('btn-outline');
+        } else {
+          btn.classList.remove('btn-primary');
+          btn.classList.add('btn-outline');
+        }
+      });
+
+      // Filter projects
+      const filtered = category === 'All'
+        ? allProjects
+        : allProjects.filter(p => p.category === category);
+
+      renderProjects(filtered);
+    }
+
+    function renderProjects(projects) {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = projects.map(project => `
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer"
+          class="card card-compact bg-base-100 shadow-sm border p-6">
+          <figure>
+            <img src="${project.image_url}" alt="${project.title}" />
+          </figure>
+          <div class="card-body">
+            <h2 class="font-bold card-title">
+              ${project.title}
+              <div class="badge badge-outline badge-info whitespace-nowrap">${project.status_badge}</div>
+            </h2>
+            <p>${project.description}</p>
+            <div class="py-4 card-actions justify-end">
+              ${project.tags.map(tag => `<div class="badge badge-primary">${tag}</div>`).join('')}
+            </div>
+          </div>
+        </a>
+      `).join('');
+    }
   </script>
 </body>
 

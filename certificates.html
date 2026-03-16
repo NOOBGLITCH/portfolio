@@ -47,62 +47,17 @@
         ✪ Certificates ✪
       </h1>
 
-      <div class="container mx-auto px-4">
-        <div id="certificates-grid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+      <div class="py-4 px-2">
+        <div id="category-filters"
+          class="flex flex-nowrap gap-2 overflow-x-auto pb-2 px-4 justify-start md:justify-center">
+        </div>
+      </div>
+
+      <div class="py-12">
+        <div id="certificates-grid" class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mb-12"></div>
       </div>
     </section>
   </main>
-
-  <style>
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: var(--fallback-b1, oklch(var(--b1)/1));
-      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
-      z-index: 50;
-    }
-
-    .dock {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 0.5rem 0.75rem;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .dock::-webkit-scrollbar {
-      display: none;
-    }
-
-    .dock a {
-      flex: 0 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--fallback-c, oklch(var(--bc)/1));
-      font-size: 0.8rem;
-      min-width: 60px;
-    }
-
-    .dock i {
-      font-size: 1.1rem;
-      margin-bottom: 3px;
-    }
-
-    .dock-label {
-      font-size: 0.7rem;
-      white-space: nowrap;
-    }
-
-    main {
-      padding-bottom: 5.5rem;
-    }
-  </style>
 
   <footer>
     <div class="dock">
@@ -118,7 +73,7 @@
 
       <a href="aboutme.html" class="flex flex-col items-center justify-center">
         <i class="fa-regular fa-circle-user"></i>
-        <span class="dock-label">About Me</span>
+        <span class="dock-label">About Me</span>
       </a>
 
       <a href="certificates.html" class="flex flex-col items-center justify-center">
@@ -129,28 +84,102 @@
   </footer>
 
   <script>
+    let allCertificates = [];
+
+    // Set active dock tab
+    const currentPage = window.location.pathname.split('/').pop() || 'certificates.html';
+    document.querySelectorAll('.dock a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+        link.classList.add('btn-active');
+        link.style.color = 'var(--fallback-p, oklch(var(--p)/1))';
+      }
+    });
+
+    // Helper for button styles (Active uses the orange theme from your image)
+    function getBtnClasses(isActive) {
+      const base = "px-4 py-2 rounded-xl border transition-all duration-300 font-bold text-sm whitespace-nowrap bg-transparent cursor-pointer ";
+      const active = "border-[#ff6b4a] text-[#ff6b4a]";
+      const inactive = "border-slate-700 text-slate-400 hover:border-slate-500 hover:text-white";
+      return base + (isActive ? active : inactive);
+    }
+
+    // Initialize Page
     fetch('certificates.json')
       .then(res => res.json())
       .then(certificates => {
-        const grid = document.getElementById('certificates-grid');
-        grid.innerHTML = certificates.map(cert => `
-          <div class="card bg-base-100 shadow-xl border border-blue-500">
-            <figure class="h-48 md:h-64 lg:h-80 flex items-center justify-center p-4">
-              <img src="${cert.image_url}" alt="${cert.title}" class="max-w-full max-h-full object-contain rounded-lg" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title text-blue-500">${cert.title}</h2>
-              <p class="text-gray-500">Issued by ${cert.issuer}</p>
-              <div class="card-actions justify-end">
-                <a href="${cert.view_url}" target="_blank" class="text-white dark:text-white btn btn-primary btn-sm">
-                  View Certificate
-                </a>
-              </div>
+        allCertificates = certificates;
+
+        const categories = ['All', ...new Set(certificates.map(c => c.category))];
+        const filterContainer = document.getElementById('category-filters');
+
+        filterContainer.innerHTML = categories.map((cat, index) => `
+          <button onclick="filterCertificates('${cat}')" class="${getBtnClasses(index === 0)}">
+            ${cat}
+          </button>
+        `).join('');
+
+        renderCertificates(certificates);
+      });
+
+    function filterCertificates(category) {
+      const buttons = document.querySelectorAll('#category-filters button');
+      buttons.forEach(btn => {
+        btn.className = getBtnClasses(btn.textContent.trim() === category);
+      });
+
+      const filtered = category === 'All'
+        ? allCertificates
+        : allCertificates.filter(c => c.category === category);
+
+      renderCertificates(filtered);
+    }
+
+    function renderCertificates(certificates) {
+      const grid = document.getElementById('certificates-grid');
+      grid.innerHTML = certificates.map(cert => `
+        <div class="card bg-base-100 shadow-xl border border-blue-500 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+          <figure class="h-48 md:h-64 lg:h-80 flex items-center justify-center p-4 bg-slate-900/10">
+            <img src="${cert.image_url}" alt="${cert.title}" class="max-w-full max-h-full object-contain rounded-lg" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title text-blue-500 leading-tight">${cert.title}</h2>
+            <div class="badge badge-outline badge-info mb-2">${cert.category}</div>
+            <p class="text-gray-500 text-sm">Issued by ${cert.issuer}</p>
+            <div class="card-actions justify-end mt-4">
+              <a href="${cert.view_url}" target="_blank" class="btn btn-primary btn-sm text-white">
+                View Certificate
+              </a>
             </div>
           </div>
-        `).join('');
-      });
+        </div>
+      `).join('');
+    }
   </script>
+
+  <footer>
+    <div class="dock">
+      <a href="index.html" class="flex flex-col items-center justify-center">
+        <i class="fa-solid fa-house"></i>
+        <span class="dock-label">Home</span>
+      </a>
+
+      <a href="project.html" class="flex flex-col items-center justify-center">
+        <i class="fa-solid fa-code"></i>
+        <span class="dock-label">Projects</span>
+      </a>
+
+      <a href="aboutme.html" class="flex flex-col items-center justify-center">
+        <i class="fa-regular fa-circle-user"></i>
+        <span class="dock-label">About Me</span>
+      </a>
+
+      <a href="certificates.html" class="flex flex-col items-center justify-center">
+        <i class="fa-solid fa-envelope-circle-check"></i>
+        <span class="dock-label">Certificates</span>
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>
