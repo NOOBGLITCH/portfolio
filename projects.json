@@ -1,0 +1,66 @@
+[
+  {
+    "id": 7,
+    "title": "The Bookmark app",
+    "image_url": "https://i.ibb.co/rR8jxCLb/unnamed.jpg",
+    "description": "Developed a React-based bookmark manager to save and organize links with automatic metadata tagging. Designed a clean UI and implemented client-side persistence using browser local storage.",
+    "status_badge": "self-built",
+    "tags": ["bookmark", "web-app", "self-built"]
+  },
+  {
+    "id": 6,
+    "title": "Telegram Content Saver Bot",
+    "image_url": "https://i.ibb.co/v6THbbZX/unnamed.jpg",
+    "description": "Built and deployed a serverless Telegram bot using webhook architecture on Vercel that allows users to save and organize text, articles, videos, files, and media captions in real time.",
+    "status_badge": "serverless",
+    "tags": ["telegram", "bot", "serverless"]
+  },
+  {
+    "id": 5,
+    "title": "First Docker Compose",
+    "image_url": "https://i.postimg.cc/VkG4dSCb/2.jpg",
+    "description": "Django web app deployed using Docker Compose with Nginx and MySQL for a complete stack setup.",
+    "status_badge": "Mar 25",
+    "tags": ["python", "django", "docker", "nginx", "mysql"]
+  },
+  {
+    "id": 4,
+    "title": "Multi-Stage Docker",
+    "image_url": "https://i.postimg.cc/J7ZTP499/3.jpg",
+    "description": "Three-stage Docker build for optimized, lightweight app containers with build, test, and deploy phases.",
+    "status_badge": "Mar 30",
+    "tags": ["docker", "multistage"]
+  },
+  {
+    "id": 3,
+    "title": "Telegram AI Bot",
+    "image_url": "https://i.postimg.cc/D0rBZBr2/4.jpg",
+    "description": "Telegram bot that connects to 33 AI models using OpenRouter API for smart chat, Q&A, and more.",
+    "status_badge": "Apr 04",
+    "tags": ["python", "api"]
+  },
+  {
+    "id": 2,
+    "title": "Text-to-Image",
+    "image_url": "https://i.postimg.cc/zGX0zwVr/1.jpg",
+    "description": "Web app that generates AI images from text using Hugging Face models. Deployed with GitHub Pages.",
+    "status_badge": "Apr 11",
+    "tags": ["html", "huggingface"]
+  },
+  {
+    "id": 1,
+    "title": "Android VPN Client",
+    "image_url": "https://i.postimg.cc/m2SmWpZj/5.jpg",
+    "description": "Custom Android VPN app using OpenVPN with one-tap connect, privacy-first design & multiple servers.",
+    "status_badge": "Apr 17",
+    "tags": ["java", "vpn"]
+  },
+  {
+    "id": 0,
+    "title": "Awsome Linux Learn",
+    "image_url": "https://i.postimg.cc/4NGWMRGn/6.jpg",
+    "description": "Comprehensive Linux learning resources including cheat sheets, commands, loops, functions, and more.",
+    "status_badge": "Apr 20",
+    "tags": ["linux", "cheatsheet"]
+  }
+]

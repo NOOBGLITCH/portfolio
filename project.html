@@ -2,6 +2,7 @@
 <html lang="en" data-theme="sunset">
 
 <head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" />
@@ -55,248 +56,109 @@
   </div>
 
   <div class="py-12">
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mb-12"></div>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mb-12">
+  <style>
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: var(--fallback-b1, oklch(var(--b1)/1));
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+      z-index: 50;
+    }
 
-      <a href="https://github.com/NOOBGLITCH/thebookmarkapp" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.ibb.co/rR8jxCLb/unnamed.jpg" alt="JioTV Plus" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            The Bookmark app
-            <div class="badge badge-outline badge-info whitespace-nowrap">self-built</div>
-          </h2>
-          <p>
-            Developed a React-based bookmark manager to save and organize links with automatic metadata tagging.
-            Designed a clean UI and implemented client-side persistence using browser local storage. Built entirely
-            frontend-based without AI tools or external API dependencies, ensuring a lightweight and cost-efficient
-            solution.
-          <div class="py-4 card-actions justify-end">
-            <div class="badge badge-primary">bookmark</div>
-            <div class="badge badge-primary">web-app</div>
-            <div class="badge badge-primary">self-built</div>
-          </div>
-        </div>
+    .dock {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .dock::-webkit-scrollbar {
+      display: none;
+    }
+
+    .dock a {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--fallback-c, oklch(var(--bc)/1));
+      font-size: 0.8rem;
+      min-width: 60px;
+    }
+
+    .dock i {
+      font-size: 1.1rem;
+      margin-bottom: 3px;
+    }
+
+    .dock-label {
+      font-size: 0.7rem;
+      white-space: nowrap;
+    }
+
+    main {
+      padding-bottom: 5.5rem;
+    }
+  </style>
+
+  <footer>
+    <div class="dock">
+      <a href="index.html" class="flex flex-col items-center justify-center">
+        <i class="fa-solid fa-house"></i>
+        <span class="dock-label">Home</span>
       </a>
 
-      <a href="https://github.com/NOOBGLITCH/telegraamsaverbot" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.ibb.co/v6THbbZX/unnamed.jpg" alt="JioTV Lite" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            Telegram Content Saver Bot
-            <div class="badge badge-outline badge-success whitespace-nowrap">serverless</div>
-          </h2>
-          <p>
-            Built and deployed a serverless Telegram bot using webhook architecture on Vercel that allows users to save
-            and organize text, articles, videos, files, and media captions in real time.
-          </p>
-          <div class="py-4 card-actions justify-end">
-            <div class="badge badge-success">telegram</div>
-            <div class="badge badge-success">bot</div>
-            <div class="badge badge-success">serverless</div>
-          </div>
-        </div>
+      <a href="project.html" class="flex flex-col items-center justify-center">
+        <i class="fa-solid fa-code"></i>
+        <span class="dock-label">Projects</span>
       </a>
 
-      <a href="https://github.com/NOOBGLITCH/first-docker-compose" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.postimg.cc/VkG4dSCb/2.jpg" alt="First Docker Compose" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            First Docker Compose
-            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Mar 25</div>
-          </h2>
-          <p>Django web app deployed using Docker Compose with Nginx and MySQL for a complete stack setup.</p>
-          <div class="py-4 card-actions justify-end">
-            <div class="badge badge-info">python</div>
-            <div class="badge badge-info">django</div>
-            <div class="badge badge-info">docker</div>
-            <div class="badge badge-info">nginx</div>
-            <div class="badge badge-info">mysql</div>
-          </div>
-        </div>
+      <a href="aboutme.html" class="flex flex-col items-center justify-center">
+        <i class="fa-regular fa-circle-user"></i>
+        <span class="dock-label">About Me</span>
       </a>
 
-      <a href="https://github.com/NOOBGLITCH/multistagedocker" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.postimg.cc/J7ZTP499/3.jpg" alt="Multi-Stage Docker" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            Multi-Stage Docker
-            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Mar 30</div>
-          </h2>
-          <p>Three-stage Docker build for optimized, lightweight app containers with build, test, and deploy phases.</p>
-          <div class="card-actions justify-end">
-            <div class="badge badge-info">docker</div>
-            <div class="badge badge-info">multistage</div>
-          </div>
-        </div>
+      <a href="certificates.html" class="flex flex-col items-center justify-center">
+        <i class="fa-solid fa-envelope-circle-check"></i>
+        <span class="dock-label">Certificates</span>
       </a>
-
-      <a href="https://github.com/NOOBGLITCH/openroutertelegrambot" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.postimg.cc/D0rBZBr2/4.jpg" alt="OpenRouter Telegram Bot" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Telegram AI Bot
-            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 04</div>
-          </h2>
-          <p>Telegram bot that connects to 33 AI models using OpenRouter API for smart chat, Q&A, and more.</p>
-          <div class="card-actions justify-end">
-            <div class="badge badge-info">python</div>
-            <div class="badge badge-info">api</div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/NOOBGLITCH/text-to-image" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.postimg.cc/zGX0zwVr/1.jpg" alt="Text to Image Generator" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            Text-to-Image
-            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 11</div>
-          </h2>
-          <p>Web app that generates AI images from text using Hugging Face models. Deployed with GitHub Pages.</p>
-          <div class="py-4 card-actions justify-end">
-            <div class="badge badge-info">html</div>
-            <div class="badge badge-info">huggingface</div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/NOOBGLITCH/android-vpn-client-ics-openvpn" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.postimg.cc/m2SmWpZj/5.jpg" alt="Android VPN" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            Android VPN Client
-            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 17</div>
-          </h2>
-          <p>Custom Android VPN app using OpenVPN with one-tap connect, privacy-first design & multiple servers.</p>
-          <div class="py-4 card-actions justify-end">
-            <div class="badge badge-info">java</div>
-            <div class="badge badge-info">vpn</div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://github.com/NOOBGLITCH/awsome-linux-learn" target="_blank" rel="noopener noreferrer"
-        class="card card-compact bg-base-100 shadow-sm border p-6">
-        <figure>
-          <img src="https://i.postimg.cc/4NGWMRGn/6.jpg" alt="Awsome Linux Learn" />
-        </figure>
-        <div class="card-body">
-          <h2 class="font-bold card-title">
-            Awsome Linux Learn
-            <div class="badge badge-outline badge-info whitespace-nowrap overflow-hidden text-ellipsis">Apr 20</div>
-          </h2>
-          <p>Comprehensive Linux learning resources including cheat sheets, commands, loops, functions, and more.</p>
-          <div class="py-2 card-actions justify-end">
-            <div class="badge badge-info">linux</div>
-            <div class="badge badge-info">cheatsheet</div>
-          </div>
-        </div>
-      </a>
-
     </div>
+  </footer>
 
-    <style>
-      /* === Minimal Full-Width Dock Footer === */
-      footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: var(--fallback-b1, oklch(var(--b1)/1));
-        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
-        z-index: 50;
-      }
-
-      .dock {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0.5rem 0.75rem;
-        overflow-x: auto;
-        scrollbar-width: none;
-        /* hide scrollbar (Firefox) */
-      }
-
-      .dock::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* hide scrollbar (Chrome/Safari) */
-
-      .dock a {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: var(--fallback-c, oklch(var(--bc)/1));
-        font-size: 0.8rem;
-        min-width: 60px;
-      }
-
-      .dock i {
-        font-size: 1.1rem;
-        /* smaller icons */
-        margin-bottom: 3px;
-      }
-
-      .dock-label {
-        font-size: 0.7rem;
-        white-space: nowrap;
-        /* keep text on one line */
-      }
-
-      main {
-        padding-bottom: 5.5rem;
-        /* prevent overlap with dock */
-      }
-    </style>
-
-    <footer>
-      <div class="dock">
-        <a href="index.html" class="flex flex-col items-center justify-center">
-          <i class="fa-solid fa-house"></i>
-          <span class="dock-label">Home</span>
-        </a>
-
-        <a href="project.html" class="flex flex-col items-center justify-center">
-          <i class="fa-solid fa-code"></i>
-          <span class="dock-label">Projects</span>
-        </a>
-
-        <a href="aboutme.html" class="flex flex-col items-center justify-center">
-          <i class="fa-regular fa-circle-user"></i>
-          <span class="dock-label">About Me</span>
-        </a>
-
-        <a href="certificates.html" class="flex flex-col items-center justify-center">
-          <i class="fa-solid fa-envelope-circle-check"></i>
-          <span class="dock-label">Certificates</span>
-        </a>
-      </div>
-    </footer>
+  <script>
+    fetch('projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const grid = document.getElementById('projects-grid');
+        grid.innerHTML = projects.map(project => `
+          <a href="https://github.com/NOOBGLITCH" target="_blank" rel="noopener noreferrer"
+            class="card card-compact bg-base-100 shadow-sm border p-6">
+            <figure>
+              <img src="${project.image_url}" alt="${project.title}" />
+            </figure>
+            <div class="card-body">
+              <h2 class="font-bold card-title">
+                ${project.title}
+                <div class="badge badge-outline badge-info whitespace-nowrap">${project.status_badge}</div>
+              </h2>
+              <p>${project.description}</p>
+              <div class="py-4 card-actions justify-end">
+                ${project.tags.map(tag => `<div class="badge badge-primary">${tag}</div>`).join('')}
+              </div>
+            </div>
+          </a>
+        `).join('');
+      });
+  </script>
 </body>
 
 </html>
