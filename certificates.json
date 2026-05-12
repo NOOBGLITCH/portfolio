@@ -1,27 +1,11 @@
 [
   {
-    "id": 5,
-    "title": "AWS EC2 Basics",
-    "issuer": "AWS",
+    "id": 1,
+    "title": "Amazon Connect Troubleshooting",
+    "issuer": "AWS Training",
     "category": "Cloud Computing",
-    "image_url": "https://i.ibb.co/spxNbPGf/DOC-20251010-WA0002.jpg",
-    "view_url": "https://i.ibb.co/spxNbPGf/DOC-20251010-WA0002.jpg"
-  },
-  {
-    "id": 4,
-    "title": "GDG Hackathon",
-    "issuer": "Google Developer Group",
-    "category": "Hackathons",
-    "image_url": "https://i.ibb.co/rGYvBWf6/Jidnyesh-Patil-Certificate.jpg",
-    "view_url": "https://i.ibb.co/rGYvBWf6/Jidnyesh-Patil-Certificate.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Web Development with AI Training",
-    "issuer": "Internshala",
-    "category": "Web Development",
-    "image_url": "https://i.ibb.co/W4r27wkg/Web-Development-with-AI-Training-Certificate-of-Completion.jpg",
-    "view_url": "https://i.ibb.co/W4r27wkg/Web-Development-with-AI-Training-Certificate-of-Completion.jpg"
+    "image_url": "https://i.ibb.co/BVDB6DxF/amazon-connect-trobleshooting.jpg",
+    "view_url": "https://i.ibb.co/BVDB6DxF/amazon-connect-trobleshooting.jpg"
   },
   {
     "id": 2,
@@ -32,11 +16,35 @@
     "view_url": "https://i.ibb.co/fTH9mTr/amazon-connect-instance.jpg"
   },
   {
-    "id": 1,
-    "title": "Amazon Connect Troubleshooting",
-    "issuer": "AWS Training",
+    "id": 3,
+    "title": "Web Development with AI Training",
+    "issuer": "Internshala",
+    "category": "Web Development",
+    "image_url": "https://i.ibb.co/W4r27wkg/Web-Development-with-AI-Training-Certificate-of-Completion.jpg",
+    "view_url": "https://i.ibb.co/W4r27wkg/Web-Development-with-AI-Training-Certificate-of-Completion.jpg"
+  },
+  {
+    "id": 4,
+    "title": "GDG Hackathon",
+    "issuer": "Google Developer Group",
+    "category": "Hackathons",
+    "image_url": "https://i.ibb.co/rGYvBWf6/Jidnyesh-Patil-Certificate.jpg",
+    "view_url": "https://i.ibb.co/rGYvBWf6/Jidnyesh-Patil-Certificate.jpg"
+  },
+  {
+    "id": 5,
+    "title": "AWS EC2 Basics",
+    "issuer": "AWS",
     "category": "Cloud Computing",
-    "image_url": "https://i.ibb.co/BVDB6DxF/amazon-connect-trobleshooting.jpg",
-    "view_url": "https://i.ibb.co/BVDB6DxF/amazon-connect-trobleshooting.jpg"
+    "image_url": "https://i.ibb.co/spxNbPGf/DOC-20251010-WA0002.jpg",
+    "view_url": "https://i.ibb.co/spxNbPGf/DOC-20251010-WA0002.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Linux - Skill Up",
+    "issuer": "GFG",
+    "category": "Linux",
+    "image_url": "https://i.ibb.co/tpN1wTM0/gfg-linux.jpg",
+    "view_url": "https://i.ibb.co/tpN1wTM0/gfg-linux.jpg"
   }
 ]
