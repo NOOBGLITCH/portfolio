@@ -1,5 +1,25 @@
 [
   {
+    "id": 11,
+    "title": "AWS S3 & CloudFront Static Website",
+    "category": "DevOps",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/terraform-static-web/image?custom_language=Terraform&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "link": "https://github.com/NOOBGLITCH/terraform-static-web",
+    "description": "Automated CI/CD pipeline using Terraform and GitHub Actions to provision AWS infrastructure and deploy website files from the www/ folder directly to Amazon S3 behind a CloudFront CDN.",
+    "status_badge": "Completed",
+    "tags": ["terraform", "aws", "s3", "cloudfront", "github-actions", "devops", "iac"]
+  },
+  {
+    "id": 10,
+    "title": "SVG With Text",
+    "category": "Frontend / Tools",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/svgwithtext/image?language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "link": "https://github.com/NOOBGLITCH/svgwithtext",
+    "description": "A lightweight utility to dynamically embed and render custom text inside SVGs.",
+    "status_badge": "Active",
+    "tags": ["svg", "javascript", "web-tools", "frontend"]
+  },
+  {
     "id": 8,
     "title": "Website on AWS S3",
     "category": "Cloud & Web Hosting",
@@ -53,7 +73,7 @@
     "id": 4,
     "title": "Multi-Stage Docker",
     "category": "DevOps",
-    "image_url": "https://socialify.git.ci/NOOBGLITCH/multistagedocker/image?custom_language=Docker&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/multistagedocker/image?custom_language=Docker&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Circuit+Board&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/multistagedocker",
     "description": "Three-stage Docker build for optimized, lightweight app containers with build, test, and deploy phases.",
     "status_badge": "Mar 30",
@@ -93,7 +113,7 @@
     "id": 0,
     "title": "Awsome Linux Learn",
     "category": "Learning Resources",
-    "image_url": "https://socialify.git.ci/NOOBGLITCH/awsome-linux-learn/image?custom_language=Linux&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/awsome-linux-learn/image?custom_language=Linux&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Circuit+Board&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/awsome-linux-learn",
     "description": "Comprehensive Linux learning resources including cheat sheets, commands, loops, functions, and more.",
     "status_badge": "Apr 20",
