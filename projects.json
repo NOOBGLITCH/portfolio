@@ -1,14 +1,14 @@
-{
-  "id": 13,
-  "title": "Opencode on Railway",
-  "category": "DevOps / AI Infrastructure",
-  "image_url": "https://socialify.git.ci/NOOBGLITCH/Opencode-on-Railway/image?custom_language=Docker&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
-  "link": "https://github.com/NOOBGLITCH/Opencode-on-Railway",
-  "description": "Self-hosted AI developer workstation on Railway featuring OpenChamber, OpenCode AI, Cloudflare Wrangler, GitLab CLI, GitHub CLI, and zero-data-loss volume persistence.",
-  "status_badge": "Active",
-  "tags": ["railway", "opencode", "ai-workstation", "openchamber", "cloudflare-wrangler", "github-cli", "gitlab-cli", "devops", "self-hosted"]
-},
 [
+  {
+    "id": 13,
+    "title": "Opencode on Railway",
+    "category": "DevOps / AI Infrastructure",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/Opencode-on-Railway/image?custom_language=Docker&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "link": "https://github.com/NOOBGLITCH/Opencode-on-Railway",
+    "description": "Self-hosted AI developer workstation on Railway featuring OpenChamber, OpenCode AI, Cloudflare Wrangler, GitLab CLI, GitHub CLI, and zero-data-loss volume persistence.",
+    "status_badge": "Active",
+    "tags": ["railway", "opencode", "ai-workstation", "openchamber", "cloudflare-wrangler", "github-cli", "gitlab-cli", "devops", "self-hosted"]
+  },
   {
     "id": 12,
     "title": "Uptime Monitoring System",
