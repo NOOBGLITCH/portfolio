@@ -3,7 +3,7 @@
     "id": 14,
     "title": "Token Monitor Hub",
     "category": "AI Token Monitoring",
-    "image_url": "https://socialify.git.ci/NOOBGLITCH/token-monitor-hub/image?custom_language=Cloudflare%20Workers&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fsimple-icons%2Fsimple-icons%40develop%2Ficons%2Fcloudflareworkers.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/token-monitor-hub/image?custom_language=React&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fcloudflare-workers%2Fdefault.svg&name=1&owner=1&stargazers=1&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/token-monitor-hub",
     "description": "Cloudflare Worker-based AI token usage hub for OpenCode and Antigravity with automated Bash sync, cron-based collection, secure APIs, real-time SSE updates, and a live DaisyUI/Lucide dashboard.",
     "status_badge": "Completed",
@@ -46,7 +46,7 @@
     "image_url": "https://socialify.git.ci/NOOBGLITCH/svgwithtext/image?language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/svgwithtext",
     "description": "A lightweight utility to dynamically embed and render custom text inside SVGs.",
-    "status_badge": "completed",
+    "status_badge": "Completed",
     "tags": ["svg", "javascript", "web-tools", "frontend"]
   },
   {
@@ -56,7 +56,7 @@
     "image_url": "https://socialify.git.ci/NOOBGLITCH/websisite-on-aws-s3/image?custom_language=GitHub+Actions&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Circuit+Board&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/websisite-on-aws-s3",
     "description": "Deployed a static website on AWS S3 with CloudFront CDN and GitHub Actions CI/CD. Configured secure access, optimized delivery, and automated deployments on every push to main.",
-    "status_badge": "self-built",
+    "status_badge": "Self-Built",
     "tags": ["aws", "s3", "static-site", "cloud"]
   },
   {
@@ -70,13 +70,13 @@
     "tags": ["terraform", "iac", "devops", "cloud"]
   },
   {
-    "id": 10,
+    "id": 6,
     "title": "100 Days of DevOps Challenge",
     "category": "DevOps",
     "image_url": "https://socialify.git.ci/NOOBGLITCH/100-Days-Of-DevOps-Challenge-KodeKloud/image?custom_language=DevOps&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Circuit+Board&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/100-Days-Of-DevOps-Challenge-KodeKloud",
     "description": "100 Days of DevOps Challenge by KodeKloud - 43 days completed. Comprehensive DevOps learning journey covering CI/CD, containers, cloud, and automation.",
-    "status_badge": "completed",
+    "status_badge": "Completed",
     "tags": ["devops", "kodekloud", "learning", "challenge", "cicd"]
   },
   {
@@ -86,7 +86,7 @@
     "image_url": "https://socialify.git.ci/NOOBGLITCH/thebookmarkapp/image?custom_language=React&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/thebookmarkapp",
     "description": "Developed a React-based bookmark manager to save and organize links with automatic metadata tagging. Designed a clean UI and implemented client-side persistence.",
-    "status_badge": "self-built",
+    "status_badge": "Self-Built",
     "tags": ["bookmark", "web-app", "self-built"]
   },
   {
@@ -141,7 +141,7 @@
   },
   {
     "id": 0,
-    "title": "Awsome Linux Learn",
+    "title": "Awesome Linux Learn",
     "category": "Learning Resources",
     "image_url": "https://socialify.git.ci/NOOBGLITCH/awsome-linux-learn/image?custom_language=Linux&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Circuit+Board&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/awsome-linux-learn",

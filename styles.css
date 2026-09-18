@@ -1,131 +1,162 @@
-/* Skills Section */
+/* ==========================================================
+   Portfolio – global stylesheet
+   Design tokens, base rules, skills grid, dock footer
+   ========================================================== */
+
+:root {
+  --space-section-y: 2rem;
+  --space-grid-bottom: 4rem;
+  --radius-card: 0.75rem;
+  --transition-fast: 150ms ease;
+  --transition-card: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 15px -2px rgba(59, 130, 246, 0.2);
+}
+
+/* ---------- Base ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
+}
+
+/* Visible keyboard focus for links & buttons */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Every page wraps content in <main>; reserve room for the fixed dock */
+main {
+  padding-bottom: 5.5rem;
+}
+
+/* ---------- Skills section ---------- */
+
 .skills-section {
-  padding: 4rem 2rem;
+  padding: var(--space-section-y) 1rem var(--space-grid-bottom);
   position: relative;
   overflow: hidden;
 }
 
-.skills-section h2 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  margin-bottom: 3rem;
+.skills-section h2,
+.skills-section h3 {
+  margin-bottom: 0.75rem;
   text-align: center;
+  text-wrap: balance;
 }
 
-/* Skills Grid */
+/* ---------- Skills grid ---------- */
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   max-width: 1200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto var(--space-grid-bottom);
 }
 
-/* Skills Grid Responsive */
-@media (max-width: 767px) {
+@media (min-width: 640px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .skills-grid {
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .skills-grid {
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 2rem;
   }
 }
 
-/* Skill Card */
+/* ---------- Skill card ---------- */
+
 .skill-card {
-  background: rgba(30, 41, 59, 0.4);
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  position: relative;
-  overflow: hidden;
+  -webkit-backdrop-filter: blur(6px);
+  padding: 1rem 0.75rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-card);
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px -2px rgba(59, 130, 246, 0.2);
-  border-color: rgba(96, 165, 250, 0.1);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(96, 165, 250, 0.35);
 }
 
-/* Skill Item (Image & Text) */
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.skill-item img {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 5px;
-}
-
-.skill-item h3 {
-  font-size: 18px;
+.skill-card h3 {
+  font-size: 1rem;
   font-weight: 600;
   margin: 0;
+  line-height: 1.25;
 }
 
-/* Hide Icon Tag */
-.skill-card i {
-  display: none;
+/* Actual icon class used in index.html */
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
-/* Ghost Button Hover */
+/* ---------- Buttons ---------- */
+
 .btn-ghost:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Active Dock */
-.dock-active {
-  padding-bottom: 12px;
-  position: relative;
+.btn {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-/* Dock Label */
-.dock-label {
-  font-size: 0.9em;
-  white-space: nowrap;
-  order: 1;
-}
+/* ---------- Dock footer ---------- */
 
-/* === Minimal Full-Width Dock Footer === */
 footer {
   position: fixed;
+  inset-inline: 0;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--fallback-b1, oklch(var(--b1)/1));
+  background: var(--fallback-b1, oklch(var(--b1) / 1));
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
   z-index: 50;
+  /* Notch / gesture-bar safe area */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .dock {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 0.25rem;
   padding: 0.5rem 0.75rem;
   overflow-x: auto;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dock::-webkit-scrollbar {
@@ -134,21 +165,77 @@ footer {
 
 .dock a {
   flex: 0 0 auto;
+  min-width: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3px;
   text-decoration: none;
-  color: var(--fallback-c, oklch(var(--bc)/1));
+  color: var(--fallback-c, oklch(var(--bc) / 1));
   font-size: 0.8rem;
-  min-width: 60px;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.dock a:hover {
+  background-color: rgba(127, 127, 127, 0.12);
 }
 
 .dock i {
   font-size: 1.1rem;
-  margin-bottom: 3px;
 }
 
-main {
-  padding-bottom: 5.5rem;
+/* Active page tab (toggled by script.js) */
+.dock-active {
+  position: relative;
+  color: var(--fallback-p, oklch(var(--p) / 1));
+}
+
+.dock-active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 1.25rem;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+/* Dock label */
+.dock-label {
+  font-size: 0.9em;
+  white-space: nowrap;
+  order: 1;
+  line-height: 1.2;
+}
+
+/* ---------- Helpers ---------- */
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .skill-card:hover {
+    transform: none;
+  }
 }
