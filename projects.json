@@ -1,12 +1,22 @@
 [
   {
+    "id": 14,
+    "title": "Token Monitor Hub",
+    "category": "AI Token Monitoring",
+    "image_url": "https://socialify.git.ci/NOOBGLITCH/token-monitor-hub/image?custom_language=Cloudflare%20Workers&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fsimple-icons%2Fsimple-icons%40develop%2Ficons%2Fcloudflareworkers.svg&name=1&owner=1&pattern=Plus&theme=Dark",
+    "link": "https://github.com/NOOBGLITCH/token-monitor-hub",
+    "description": "Cloudflare Worker-based AI token usage hub for OpenCode and Antigravity with automated Bash sync, cron-based collection, secure APIs, real-time SSE updates, and a live DaisyUI/Lucide dashboard.",
+    "status_badge": "Completed",
+    "tags": ["ai-token-monitoring", "cloudflare-workers", "bash", "cron", "opencode", "antigravity", "daisyui", "lucide", "sse", "usage-tracking"]
+  },
+  {
     "id": 13,
     "title": "Opencode on Railway",
     "category": "DevOps / AI Infrastructure",
     "image_url": "https://socialify.git.ci/NOOBGLITCH/Opencode-on-Railway/image?custom_language=Docker&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Fgithub%2Fdark.svg&name=1&owner=1&pattern=Plus&theme=Dark",
     "link": "https://github.com/NOOBGLITCH/Opencode-on-Railway",
     "description": "Self-hosted AI developer workstation on Railway featuring OpenChamber, OpenCode AI, Cloudflare Wrangler, GitLab CLI, GitHub CLI, and zero-data-loss volume persistence.",
-    "status_badge": "Active",
+    "status_badge": "Completed",
     "tags": ["railway", "opencode", "ai-workstation", "openchamber", "cloudflare-wrangler", "github-cli", "gitlab-cli", "devops", "self-hosted"]
   },
   {
