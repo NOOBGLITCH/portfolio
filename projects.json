@@ -1,5 +1,15 @@
 [
   {
+  "id": 15,
+  "title": "OpenCode Devbox IaC",
+  "category": "Cloud DevOps & Infrastructure Automation",
+  "image_url": "https://socialify.git.ci/NOOBGLITCH/opencode-devbox-iac/image?custom_language=Terraform&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fglincker%2Fthesvg%40main%2Fpublic%2Ficons%2Faws%2Fdefault.svg&name=1&owner=1&stargazers=1&theme=Dark",
+  "link": "https://github.com/NOOBGLITCH/opencode-devbox-iac",
+  "description": "Automated CI/CD pipeline for provisioning and configuring an AWS cloud development environment using GitHub Actions, Terraform, and Ansible, with automated IAM, EC2, VPC, S3 remote state, Linux configuration, OpenCode/OpenChamber setup, Caddy HTTPS, and infrastructure optimization",
+  "status_badge": "Completed",
+  "tags": ["aws", "terraform", "ansible", "github-actions", "ci-cd", "infrastructure-as-code", "iam", "ec2", "vpc", "s3", "linux", "ssh", "caddy", "https", "cloud-automation", "devops", "systemd", "networking", "opencode", "openchamber"]
+ },
+  {
     "id": 14,
     "title": "Token Monitor Hub",
     "category": "AI Token Monitoring",
