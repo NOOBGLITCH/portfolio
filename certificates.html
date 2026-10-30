@@ -119,7 +119,7 @@
         return res.json();
       })
       .then(certificates => {
-        allCertificates = [...certificates].sort((a, b) => (b.id ?? 0) - (a.id ?? 0));
+        allCertificates = [...certificates];
         renderFilters(allCertificates);
         applyFilters();
       })
