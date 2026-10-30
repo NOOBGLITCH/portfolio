@@ -16,8 +16,8 @@
       "AWS",
       "Networking"
     ],
-    "image_url": "certificates/7eb42135-f9ec-4dbb-b5a7-7fa3422ba846.webp",
-    "view_url": "certificates/7eb42135-f9ec-4dbb-b5a7-7fa3422ba846.webp"
+    "image_url": "https://i.postimg.cc/26Dvv70L/7eb42135-f9ec-4dbb-b5a7-7fa3422ba846.webp",
+    "view_url": "https://i.postimg.cc/26Dvv70L/7eb42135-f9ec-4dbb-b5a7-7fa3422ba846.webp"
   },
   {
     "id": 2,
@@ -31,8 +31,8 @@
       "CLI",
       "SysAdmin Basics"
     ],
-    "image_url": "certificates/gfg-linux.jpg",
-    "view_url": "certificates/gfg-linux.jpg"
+    "image_url": "https://i.postimg.cc/1tkdDTLW/gfg-linux.jpg",
+    "view_url": "https://i.postimg.cc/1tkdDTLW/gfg-linux.jpg"
   },
   {
     "id": 3,
@@ -46,8 +46,8 @@
       "Security Groups",
       "Cloud Compute"
     ],
-    "image_url": "certificates/amzon-ec2.jpg",
-    "view_url": "certificates/amzon-ec2.jpg"
+    "image_url": "https://i.postimg.cc/dtBW0LtZ/amzon-ec2.jpg",
+    "view_url": "https://i.postimg.cc/dtBW0LtZ/amzon-ec2.jpg"
   },
   {
     "id": 4,
@@ -61,8 +61,8 @@
       "Identity Management",
       "Telephony"
     ],
-    "image_url": "certificates/379634ed-d8a3-4b12-b2a3-1dda97e90baa.jpg",
-    "view_url": "certificates/379634ed-d8a3-4b12-b2a3-1dda97e90baa.jpg"
+    "image_url": "https://i.postimg.cc/Z5jKjFY7/379634ed-d8a3-4b12-b2a3-1dda97e90baa.jpg",
+    "view_url": "https://i.postimg.cc/Z5jKjFY7/379634ed-d8a3-4b12-b2a3-1dda97e90baa.jpg"
   },
   {
     "id": 5,
@@ -76,8 +76,8 @@
       "Troubleshooting",
       "Log Analysis"
     ],
-    "image_url": "certificates/amazon-connect-trobleshooting.jpg",
-    "view_url": "certificates/amazon-connect-trobleshooting.jpg"
+    "image_url": "https://i.postimg.cc/jStG8pC1/amazon-connect-trobleshooting.jpg",
+    "view_url": "https://i.postimg.cc/jStG8pC1/amazon-connect-trobleshooting.jpg"
   },
   {
     "id": 6,
@@ -91,8 +91,8 @@
       "Agile",
       "API Integration"
     ],
-    "image_url": "certificates/Jidnyesh-Patil-Certificate.jpg",
-    "view_url": "certificates/Jidnyesh-Patil-Certificate.jpg"
+    "image_url": "https://i.postimg.cc/7YVBLfYC/Jidnyesh-Patil-Certificate.jpg",
+    "view_url": "https://i.postimg.cc/7YVBLfYC/Jidnyesh-Patil-Certificate.jpg"
   },
   {
     "id": 7,
@@ -106,7 +106,7 @@
       "JavaScript",
       "Full Stack Basics"
     ],
-    "image_url": "certificates/Web-Development-with-AI-Training-Certificate-of-Completion-1.jpg",
-    "view_url": "certificates/Web-Development-with-AI-Training-Certificate-of-Completion-1.jpg"
+    "image_url": "https://i.postimg.cc/fTZ2ZxZf/Web-Development-with-AI-Training-Certificate-of-Completion-1.jpg",
+    "view_url": "https://i.postimg.cc/fTZ2ZxZf/Web-Development-with-AI-Training-Certificate-of-Completion-1.jpg"
   }
 ]
